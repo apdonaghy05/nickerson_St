@@ -1,0 +1,95 @@
+<?php
+
+if(isset($_POST['submit']))
+
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$address = $_POST['address'];
+$city = $_POST['city'];
+$zip = $_POST['zip'];
+$phone = $_POST['phone'];
+$email = $_POST['email'];
+$job = $_POST['job'];
+$to = "apdonaghy@gmail.com";
+$subject = "New Message";
+
+mail ($to, $subject, $address, $city $zip $phone $email $job, "From:" . $first_name . $last_name);
+ 
+ 
+ ?>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <title>Nickerson St Painting</title>
+
+  
+    <link rel="stylesheet" media="screen and (min-width: 600px)" href="css/style.css"/>
+     <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/mobile.css" />
+  
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+<div class="header">
+<div class="logo"><a href="index.html"><img src= "img/nspLogo.svg"></a> </div> <div class="arrow"><a href ="index.html"><img src="img/arrow.svg"></a></div> <div class="nav">
+<a href="us.html">ABOUT</a><a href="#">CONTACT</a></div>
+</div>
+
+
+<div class="formal">
+  <div class="mona"><h1>CONTACT US</h1></div>
+<div class="let"><h1>Let us know what you need, and we'll get back to you within 48 hours.</h1></div>
+
+<div class="left down" >
+<form name="nickerson" action="contact.php" method="post">
+
+    <input type="text"  placeholder="First Name" name="first_name"><br />
+    <input type="text"  placeholder="Last Name" name="last_name"><br />
+    <input type="text"  placeholder="Address" name="address"><br />
+    <input type="text"  placeholder="City" name="city"><br />
+    <input type="text"  placeholder="Zip" name="zip"><br />
+    <input type="text"  placeholder="Phone#" name="phone"><br />
+     <input type="text"  placeholder="Email" name="email"><br />
+ </div>    
+<div>
+ 
+<div class="downer">
+  <textarea name="job" placeholder="Job Description" type="text" ></textarea>
+<div class="button"><input name="submit" type="submit" value="Submit"/></div></div>
+</form>
+</div>
+
+
+<div class="info">
+<p>
+<strong>3430 35th Ave West<br />
+Seattle, WA 98199</strong><br/>
+  <strong>P</strong> 206.228.5718<br/>
+<strong>E</strong><a href= "mailto:nickersonstreetpainting@gmail.com"> nickersonstreetpainting@gmail.com</a>
+
+</p>
+</div>
+
+
+<div class= "footer"> <p>&copy Nickerson St. Painting 2014</p></div>
+ 
+
+  </body>
+
+
+</html>
